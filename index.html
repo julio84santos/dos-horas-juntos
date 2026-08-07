@@ -342,6 +342,78 @@
             padding: 18px 50px;
         }
 
+        /* SUPER OFERTA */
+        .super-oferta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            max-width: 700px;
+            margin: 80px auto;
+            box-shadow: 0 10px 40px rgba(200, 90, 47, 0.2);
+        }
+
+        .super-oferta-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .super-oferta h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .super-oferta-price {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .super-oferta-comparison {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .super-oferta-benefits {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .super-oferta-benefits li {
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .super-oferta-benefits strong {
+            color: #FFC107;
+        }
+
+        .super-oferta .btn-cta {
+            background-color: white;
+            color: var(--primary);
+            font-size: 18px;
+            padding: 18px 50px;
+            width: 100%;
+            text-align: center;
+            border: none;
+            font-weight: bold;
+        }
+
+        .super-oferta .btn-cta:hover {
+            background-color: #f5f5f5;
+        }
+
         /* FOOTER */
         footer {
             background: var(--dark);
@@ -520,7 +592,6 @@
             <div class="testimonio">
                 <div class="testimonio-quote">"No esperaba que esto me ayudara también a mí emocionalmente. Necesitaba esto."</div>
                 <div class="testimonio-author">— Roberto, 55 años | Sevilla</div>
-                <div class="testimonio-badge">Primer usuario beta | Usuario desde semana 1</div>
             </div>
 
             <div class="testimonio">
@@ -652,9 +723,36 @@
 <!-- CTA FINAL -->
 <section class="cta-section">
     <h2>¿Listo para cambiar tus visitas?</h2>
-    <p>Solo son €11.99. Acceso de por vida. Garantía de 30 días. Sin riesgos.</p>
-    <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Comprar ahora</a>
+    <p>Empieza con la versión completa:</p>
 </section>
+
+<!-- SUPER OFERTA -->
+<div class="super-oferta">
+    <div class="super-oferta-badge">⭐ RECOMENDADO - MÁS POPULAR</div>
+    <h2>SUPER OFERTA</h2>
+    <div class="super-oferta-price">€19.99</div>
+    <div class="super-oferta-comparison">Solamente €8 más que la versión normal</div>
+
+    <ul class="super-oferta-benefits">
+        <li>✓ Todo de la versión normal:</li>
+        <li style="margin-left: 20px;">- 60 Actividades + Baralha de 60 cartas</li>
+        <li style="margin-left: 20px;">- Guía 115 páginas + Comunidad privada</li>
+        <li style="margin-left: 20px;">- Soporte email directo</li>
+        <li style="margin-top: 20px;"><strong>PLUS EN SUPER OFERTA:</strong></li>
+        <li><strong>+ 50 Actividades Extras</strong> (110 actividades totales)</li>
+        <li><strong>+ Guía de Adaptaciones</strong> (por tipo de demencia)</li>
+        <li style="margin-top: 15px; font-size: 14px; opacity: 0.95;">Acceso de por vida. Garantía 7 días. Sin riesgos.</li>
+    </ul>
+
+    <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Obtener Super Oferta Ahora</a>
+</div>
+
+<!-- VERSIÓN NORMAL (DISCRETA) -->
+<div style="text-align: center; padding: 40px; color: #666;">
+    <p style="font-size: 14px; margin-bottom: 10px;">¿Prefieres la versión esencial?</p>
+    <p style="font-size: 12px;">Versión Normal: 60 actividades + Baralha + Comunidad</p>
+    <a href="https://pay.hotmart.com/X107062724X" style="color: var(--primary); text-decoration: underline; font-size: 12px;">€11.99 - Versión Normal</a>
+</div>
 
 <!-- FOOTER -->
 <footer>
