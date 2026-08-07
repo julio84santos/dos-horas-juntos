@@ -414,6 +414,105 @@
             background-color: #f5f5f5;
         }
 
+        /* PRICING SECTION */
+        .pricing-section {
+            padding: 80px 40px;
+            background-color: var(--light);
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-container h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--primary);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--primary);
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(200, 90, 47, 0.15);
+        }
+
+        .pricing-card.featured .badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .pricing-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .pricing-price {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .pricing-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+            min-height: 40px;
+        }
+
+        .pricing-benefits {
+            text-align: left;
+            margin-bottom: 30px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .pricing-benefits li {
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .btn-cta {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+
         /* FOOTER */
         footer {
             background: var(--dark);
@@ -527,6 +626,57 @@
     </div>
 </section>
 
+<!-- PRICING -->
+<section class="pricing-section">
+    <div class="pricing-container">
+        <h2>Elige Tu Plan</h2>
+
+        <div class="pricing-grid">
+            <!-- PLAN NORMAL -->
+            <div class="pricing-card">
+                <h3>Versión Normal</h3>
+                <div class="pricing-price">€11.99</div>
+                <p>Comienza aquí. Todo lo que necesitas.</p>
+
+                <ul class="pricing-benefits">
+                    <li>✓ Guía 115 páginas (PDF)</li>
+                    <li>✓ 60 Actividades completas</li>
+                    <li>✓ Baralha de 60 cartas (bonus)</li>
+                    <li>✓ Comunidad privada</li>
+                    <li>✓ Soporte directo por email</li>
+                    <li>✓ Acceso de por vida</li>
+                    <li>✓ Garantía 7 días</li>
+                </ul>
+
+                <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Comprar Ahora</a>
+            </div>
+
+            <!-- PLAN SUPER OFERTA -->
+            <div class="pricing-card featured">
+                <div class="badge">⭐ Recomendado</div>
+                <h3>SUPER OFERTA</h3>
+                <div class="pricing-price">€19.99</div>
+                <p><strong>Solamente €8 más</strong></p>
+
+                <ul class="pricing-benefits">
+                    <li>✓ Todo de Versión Normal +</li>
+                    <li style="margin-top: 10px;"><strong>✓ 50 Actividades Extra</strong> (110 total!)</li>
+                    <li><strong>✓ Guía de Adaptaciones</strong></li>
+                    <li style="font-size: 12px; color: #999; margin-top: 10px;">(Alzheimer, vascular, Lewy, frontotemporal)</li>
+                    <li style="margin-top: 10px;">✓ Acceso de por vida</li>
+                    <li>✓ Garantía 7 días</li>
+                </ul>
+
+                <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Obtener Super Oferta</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; color: #999; font-size: 14px;">
+            Ambos planes incluyen acceso de por vida y garantía de 7 días. Sin riesgos.
+        </div>
+    </div>
+</section>
+
 <!-- PROBLEMA -->
 <section class="section" id="problema">
     <div class="section-grid">
@@ -597,7 +747,6 @@
             <div class="testimonio">
                 <div class="testimonio-quote">"Lo mejor ha sido descubrir que no soy el único que se siente perdido en esto. La comunidad de primeros usuarios es especial."</div>
                 <div class="testimonio-author">— Anna, 48 años | Valencia</div>
-                <div class="testimonio-badge">Primer usuario beta | Usuario desde semana 3</div>
             </div>
 
             <div class="testimonio">
@@ -609,7 +758,6 @@
             <div class="testimonio">
                 <div class="testimonio-quote">"Esto cambió completamente cómo veo mis visitas. Ahora voy sin culpa."</div>
                 <div class="testimonio-author">— Carlos, 58 años | Barcelona</div>
-                <div class="testimonio-badge">Primer usuario beta | Usuario desde semana 1</div>
             </div>
         </div>
 
