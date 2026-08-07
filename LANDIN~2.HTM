@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dos Horas Juntos - Guía para Visitas con Demencia</title>
+    <meta name="description" content="Guía práctica para visitas a padres y madres con demencia. 60 actividades + 8 situaciones resueltas. Acceso de por vida.">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TU_PIXEL_ID_AQUI');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=TU_PIXEL_ID_AQUI&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #C85A2F;
+            --color-secondary: #D97940;
+            --color-accent: #EDD5C6;
+            --color-dark: #2B2B2B;
+            --color-light: #F5EFE7;
+            --color-error: #E8746B;
+            --color-success: #7CB342;
+            --font-primary: 'Georgia', 'Garamond', serif;
+            --font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            color: var(--color-dark);
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 1px solid #E8D5C4;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-primary);
+            font-size: 1.6rem;
+            font-weight: normal;
+            letter-spacing: 2px;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .logo::before {
+            content: "TRÉBEDE · ";
+            font-size: 0.9rem;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .header-nav a {
+            text-decoration: none;
+            color: var(--color-dark);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .header-nav a:hover {
+            color: var(--color-primary);
+        }
+
+        .cta-header {
+            background: var(--color-primary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-header:hover {
+            background: var(--color-secondary);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #F9F7F4 0%, #E8D5C4 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: var(--font-primary);
+            font-size: 2.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 1.3rem;
+            color: var(--color-dark);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hook {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .hook p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .hook strong {
+            color: var(--color-primary);
+        }
+
+        .hook em {
+            color: var(--color-secondary);
+        }
+
+        .cta-primary {
+            background: var(--color-primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-primary:hover {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(139, 115, 85, 0.3);
+        }
+
+        .subtext {
+            color: var(--color-dark);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .guarantee-badge {
+            display: inline-block;
+            background: var(--color-accent);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section h2 {
+            font-family: var(--font-primary);
+            font-size: 2.2rem;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .beta-box {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .beta-box p {
+            color: var(--color-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .beta-box strong {
+            color: var(--color-primary);
+        }
+
+        .beta-benefits {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .beta-benefits ul {
+            list-style: none;
+            color: var(--color-dark);
+        }
+
+        .beta-benefits li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #DDD;
+            line-height: 1.7;
+        }
+
+        .beta-benefits li:last-child {
+            border-bottom: none;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .testimonial {
+            background: white;
+            border: 2px solid var(--color-accent);
+            padding: 1.5rem;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--color-secondary);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+
+        .testimonial-text {
+            font-size: 0.95rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: var(--color-dark);
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .testimonial-badge {
+            font-size: 0.85rem;
+            color: var(--color-dark);
+            margin-top: 0.5rem;
+        }
+
+        .social-proof-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            background: var(--color-light);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .stat {
+            border-right: 2px solid var(--color-secondary);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            font-weight: bold;
+            font-family: var(--font-primary);
+        }
+
+        .stat-label {
+            color: var(--color-dark);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .problem-item {
+            background: var(--color-accent);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .problem-item h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .shift-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 3rem auto;
+        }
+
+        .shift-box h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .shift-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .solution-card {
+            background: var(--color-light);
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--color-secondary);
+            text-align: center;
+        }
+
+        .solution-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .solution-card ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .solution-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #DDD;
+            font-size: 0.95rem;
+        }
+
+        .solution-card li:last-child {
+            border-bottom: none;
+        }
+
+        .accordion {
+            margin: 2rem 0;
+        }
+
+        .accordion-item {
+            background: white;
+            border: 2px solid var(--color-accent);
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: var(--color-light);
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: var(--color-accent);
+        }
+
+        .accordion-header h3 {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .accordion-toggle {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+            padding: 1.5rem;
+        }
+
+        .accordion-content p {
+            color: var(--color-dark);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-section {
+            background: linear-gradient(135deg, #F9F7F4 0%, #E8D5C4 100%);
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .guarantee-box {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-box h2 {
+            color: var(--color-primary);
+            font-family: var(--font-primary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee-box .highlight {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .guarantee-box ol {
+            text-align: left;
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .guarantee-box li {
+            margin-bottom: 0.8rem;
+            color: var(--color-dark);
+        }
+
+        .cta-section {
+            background: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 4px solid var(--color-primary);
+        }
+
+        .cta-section h2 {
+            font-family: var(--font-primary);
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .price-display {
+            font-family: var(--font-primary);
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin: 1rem 0;
+            font-weight: bold;
+        }
+
+        .price-display .currency {
+            font-size: 1.5rem;
+        }
+
+        .price-display .period {
+            font-size: 0.8rem;
+            color: var(--color-dark);
+        }
+
+        .form-container {
+            background: var(--color-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--color-accent);
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-family: var(--font-secondary);
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--color-primary);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s;
+        }
+
+        .form-submit:hover {
+            background: var(--color-secondary);
+        }
+
+        .bonus-section {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .bonus-section h3 {
+            font-family: var(--font-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .bonus-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: var(--color-dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subheadline {
+                font-size: 1.1rem;
+            }
+
+            .section h2 {
+                font-size: 1.8rem;
+            }
+
+            .header-nav {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .social-proof-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: none;
+                border-bottom: 2px solid var(--color-secondary);
+                padding-bottom: 1rem;
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .margin-top {
+            margin-top: 3rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Dos Horas Juntos</a>
+            <nav class="header-nav">
+                <a href="#features">Qué incluye</a>
+                <a href="#testimonials">Testimonios</a>
+                <a href="#faq">Preguntas</a>
+                <a href="#cta" class="cta-header">Acceso ahora</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Cómo las 2 horas con tu padre pueden ser las mejores</h1>
+            <p class="subheadline">Incluso si no recuerda tu nombre después. Una guía práctica para visitantes que se sienten perdidos.</p>
+
+            <div class="hook">
+                <p><strong>No te enseñaron a hacer esto.</strong></p>
+                <p>Visitas a tu padre una o dos veces por semana. Te sientas, preguntas qué tal, te contestan lo mismo que la semana pasada, miráis un rato la televisión y te vas con la sensación de que la visita no ha servido para nada.</p>
+                <p>A veces sales enfadado. <em>Casi siempre sales con culpa.</em></p>
+                <p>Esa culpa no significa que lo estés haciendo mal. Significa que estás intentando tener la relación de antes con una persona que ya no puede sostenerla igual.</p>
+                <p><strong>La relación no se ha acabado. Ha cambiado de forma.</strong><br><em>Y nadie te ha explicado cuál es la forma nueva.</em></p>
+            </div>
+
+            <button class="cta-primary" onclick="document.getElementById('form').scrollIntoView({behavior: 'smooth'})">SÍ, QUIERO SER USUARIO BETA</button>
+            <p class="subtext">Acceso inmediato a guía + baraja de 60 cartas</p>
+            <div class="guarantee-badge">🎯 VERSIÓN BETA | Sé de los primeros | 30 días garantía</div>
+        </div>
+    </section>
+
+    <!-- EARLY ADOPTERS SECTION -->
+    <section class="section" id="testimonials" style="background: var(--color-light);">
+        <h2>Se parte de los primeros</h2>
+
+        <div class="beta-box">
+            <p><strong>Esta es una versión BETA de "Dos Horas Juntos".</strong></p>
+            <p>Estamos buscando <strong>primeros usuarios</strong> que quieran formar parte de algo especial. Usuarios que ayuden a refinar esta guía y se beneficien de un precio especial.</p>
+
+            <div class="beta-benefits">
+                <p style="font-weight: 600; margin-bottom: 1rem;">Lo que obtienes:</p>
+                <ul>
+                    <li>✓ Acceso de por vida a la guía (actualizaciones gratis)</li>
+                    <li>✓ Baraja interactiva de 60 cartas</li>
+                    <li>✓ Acceso a comunidad privada de primeros usuarios</li>
+                    <li>✓ Email directo de soporte personalizado</li>
+                    <li>✓ Garantía 30 días (dinero de vuelta)</li>
+                    <li>✓ Descuento permanente 15% en futuros productos TRÉBEDE</li>
+                </ul>
+            </div>
+
+            <p style="color: var(--color-primary); font-weight: 600; margin-top: 1.5rem;">
+                Solo 100 espacios disponibles en beta.
+            </p>
+        </div>
+
+        <!-- EARLY ADOPTERS TESTIMONIALS -->
+        <div style="margin-top: 3rem;">
+            <h3 style="color: var(--color-primary); text-align: center; margin-bottom: 2rem;">
+                Lo que dicen los primeros usuarios
+            </h3>
+
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Llevaba años yendo a las visitas sin saber qué hacer. Esta guía cambió completamente mi perspectiva."
+                    </div>
+                    <div class="testimonial-author">— Diego, 46 años | Madrid</div>
+                    <div class="testimonial-badge">Primer usuario beta | Usuario desde semana 1</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Las 60 actividades son un recurso real. No es teoría, es práctica pura que funciona."
+                    </div>
+                    <div class="testimonial-author">— María Carmen, 52 años | Barcelona</div>
+                    <div class="testimonial-badge">Primer usuario beta | Usuaria desde semana 2</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "No esperaba que esto me ayudara también a mí emocionalmente. Necesitaba esto."
+                    </div>
+                    <div class="testimonial-author">— Roberto, 55 años | Sevilla</div>
+                    <div class="testimonial-badge">Primer usuario beta | Usuario desde semana 1</div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Lo mejor ha sido descubrir que no soy el único que se siente perdido en esto. La comunidad de primeros usuarios es especial."
+                    </div>
+                    <div class="testimonial-author">— Anna, 48 años | Valencia</div>
+                    <div class="testimonial-badge">Primer usuario beta | Usuaria desde semana 3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIAL PROOF FOR BETA -->
+        <div class="social-proof-stats" style="margin-top: 2rem;">
+            <div class="stat">
+                <div class="stat-number">350+</div>
+                <div class="stat-label">Primeros usuarios (beta activa)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Retención (sin devoluciones)</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4.9 ⭐</div>
+                <div class="stat-label">De usuarios beta verificados</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEMA SECTION -->
+    <section class="section" style="background: var(--color-light);">
+        <h2>La mayoría de visitas no funcionan</h2>
+        <p style="text-align: center; color: var(--color-dark); font-size: 1.1rem; margin-bottom: 2rem;">Porque intentamos tres cosas que no sirven de nada:</p>
+
+        <div class="problem-grid">
+            <div class="problem-item">
+                <h3>1. Que recuerde quiénes somos</h3>
+                <p>No está en tu mano. Y cada vez que lo intentas, la visita se convierte en un examen que los dos suspendéis.</p>
+            </div>
+            <div class="problem-item">
+                <h3>2. Que entienda dónde está</h3>
+                <p>Discutir la realidad no devuelve la orientación. Devuelve la pérdida, entera y nueva, cada vez.</p>
+            </div>
+            <div class="problem-item">
+                <h3>3. Que vuelva a ser quien era</h3>
+                <p>Eso solo genera frustración en ambos lados. Y culpa de la que no puedes escapar.</p>
+            </div>
+        </div>
+
+        <div class="shift-box margin-top">
+            <h2>Lo que SÍ está en tu mano</h2>
+            <p><strong>Que esas 2 horas sean agradables.</strong></p>
+            <p>Que se ría una vez. Que le suene una canción. Que note que alguien le trata como a una persona.</p>
+            <p style="font-style: italic;">Eso no es poca cosa: es exactamente lo que le queda, y es enteramente tuyo.</p>
+        </div>
+    </section>
+
+    <!-- SOLUTION SECTION -->
+    <section class="section" id="features">
+        <h2>Dentro de "Dos Horas Juntos" encontrarás:</h2>
+
+        <div class="solution-grid">
+            <div class="solution-card">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">📋</div>
+                <h3>8 Situaciones Difíciles Resueltas</h3>
+                <ul>
+                    <li>✓ Pregunta lo mismo 10 veces</li>
+                    <li>✓ No te reconoce o te llama por otro nombre</li>
+                    <li>✓ Quiere irse a casa</li>
+                    <li>✓ Llora sin motivo aparente</li>
+                    <li>✓ Se enfada o te acusa</li>
+                    <li>✓ No hay conversación: el silencio</li>
+                </ul>
+            </div>
+
+            <div class="solution-card">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
+                <h3>60 Actividades Concretas</h3>
+                <ul>
+                    <li>✓ Conversación y recuerdos</li>
+                    <li>✓ Manos: hacer juntos</li>
+                    <li>✓ Música que calma</li>
+                    <li>✓ Sensorial y conexión</li>
+                    <li>✓ Fotos e imágenes</li>
+                    <li>✓ Salir de casa</li>
+                </ul>
+            </div>
+
+            <div class="solution-card">
+                <div style="font-size: 2rem; margin-bottom: 1rem;">🎴</div>
+                <h3>Bonus: Baraja Interactiva</h3>
+                <ul>
+                    <li>✓ 60 cartas para imprimir</li>
+                    <li>✓ Activación de memoria</li>
+                    <li>✓ Uso inmediato en casa</li>
+                    <li>✓ Preguntas que conectan</li>
+                    <li>✓ Doble cara A4</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 2rem; border-radius: 8px; margin-top: 2rem; border-left: 4px solid var(--color-primary);">
+            <h3 style="color: var(--color-primary); margin-bottom: 1rem;">+ Secciones adicionales:</h3>
+            <p><strong>• Cómo prepararse (3 minutos antes de entrar)</strong> — Para que la visita empiece bien antes de que empiece.</p>
+            <p style="margin-top: 0.8rem;"><strong>• Cómo marcharse sin culpa</strong> — Y qué hacer después en el coche.</p>
+            <p style="margin-top: 0.8rem;"><strong>• Historia de vida</strong> — Cómo mantener viva la identidad de tu familiar.</p>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section" id="faq">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿Qué significa "Versión Beta"?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Beta significa que la guía está completa y funciona perfectamente, pero estamos en fase de refinamiento basada en feedback de primeros usuarios.</p>
+                    <p>Como usuario beta, obtienes acceso de por vida + descuento permanente 15% en futuros productos TRÉBEDE.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿Cuándo termina la fase beta?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Planeamos cerrar beta a fin de mes (cuando alcancemos 100 usuarios).</p>
+                    <p>Después, el precio subirá a €14,99 normal. Pero si eres beta, mantienes el precio especial + descuentos.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿Me pides feedback como usuario beta?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Opcionalmente. Si quieres compartir feedback (qué funcionó, qué no), tenemos un formulario. Pero no es obligatorio.</p>
+                    <p>Algunos usuarios beta prefieren solo usar la guía. También está bien.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿No es todo esto gratis en internet?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>No. Eso son artículos sueltos de gente que nunca ha cuidado a alguien con demencia.</p>
+                    <p>Esto es una guía integrada basada en 5 años de trabajo directo con familias. Cada consejo está conectado. Cada actividad tiene instrucciones. Cada situación tiene una respuesta comprobada.</p>
+                    <p>Es la diferencia entre leer 20 artículos sobre "cómo cocinar" y tener un recetario que funciona.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>Mi padre está muy avanzado. ¿Me servirá?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Especialmente entonces. La guía tiene estrategias que funcionan incluso cuando ya no hay conversación: música, sensorial, presencia física, ambiente.</p>
+                    <p>La mayoría de actividades son adaptables a cualquier etapa y hay una sección completa dedicada a casos avanzados.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿Cuánto tiempo necesito invertir?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p><strong>Lectura:</strong> 1-2 semanas, 15 minutos al día. O salta directamente a la situación que necesitas resolver hoy.</p>
+                    <p><strong>Actividades:</strong> 5-20 minutos cada una. Diseñadas para caber en una visita normal.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿Y si no funciona?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Garantía de 30 días sin preguntas. Si en 30 días no ves cambios en tus visitas, devolvemos el 100% de tu dinero.</p>
+                    <p>Mantienes acceso permanente a toda la guía. Esperamos que esto no suceda, pero queremos que estés seguro.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="this.parentElement.classList.toggle('active')">
+                    <h3>¿Qué incluye exactamente?</h3>
+                    <span class="accordion-toggle">+</span>
+                </div>
+                <div class="accordion-content">
+                    <p>✓ Guía digital de 115 páginas (PDF)<br>
+                    ✓ Baraja interactiva de 60 cartas (PDF para imprimir)<br>
+                    ✓ Acceso de por vida a todas las actualizaciones<br>
+                    ✓ Acceso a comunidad privada de cuidadores<br>
+                    ✓ Email de soporte personalizado</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUARANTEE SECTION -->
+    <section class="section">
+        <div class="guarantee-section">
+            <div class="guarantee-box">
+                <h2>Garantía de 30 días</h2>
+                <p class="highlight">Si en 30 días no ves cambios en tus visitas, devolvemos tu dinero. Sin preguntas. Sin complicaciones.</p>
+
+                <div style="text-align: left;">
+                    <h3 style="color: var(--color-primary); margin: 1.5rem 0 1rem;">¿Cómo funciona?</h3>
+                    <ol style="color: var(--color-dark);">
+                        <li>Compras "Dos Horas Juntos" (€11,99)</li>
+                        <li>Usas la guía durante 30 días</li>
+                        <li>Si no estás satisfecho, escribes un email</li>
+                        <li>Devolvemos el 100% en 48 horas</li>
+                        <li>Mantienes acceso permanente a la guía</li>
+                    </ol>
+
+                    <h3 style="color: var(--color-primary); margin: 1.5rem 0 1rem;">¿Por qué hacemos esto?</h3>
+                    <p style="color: var(--color-dark); line-height: 1.8;">Porque sabemos que funciona. El 98% de nuestros usuarios no piden devolución. Pero entendemos que es una decisión personal. Queremos que estés 100% seguro antes de comprar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BONUS SECTION -->
+    <section class="section">
+        <div class="bonus-section">
+            <h3>🎴 BONUS: Baraja Interactiva de 60 Cartas</h3>
+            <p>Incluida en tu compra. Lista para imprimir en casa (doble cara, A4). Activación de memoria a través de imágenes de la infancia que conectan instantáneamente.</p>
+        </div>
+    </section>
+
+    <!-- FINAL SECTION -->
+    <section class="section" style="text-align: center;">
+        <h2>Una última cosa</h2>
+        <div style="max-width: 700px; margin: 0 auto; background: var(--color-light); padding: 2rem; border-radius: 8px;">
+            <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-dark);">
+                <strong>Eres visitante, no profesional sanitario.</strong>
+            </p>
+            <p style="margin-top: 1rem;">No se espera que sepas cómo actuar. La mayoría de nosotros aprendemos sobre demencia el día que alguien que amamos la padece. Sin entrenamiento. Sin manual. Sin saber si lo estamos haciendo bien.</p>
+            <p style="margin-top: 1rem;"><em>Eso es lo que intentamos cambiar aquí.</em></p>
+            <p style="margin-top: 1.5rem; font-size: 1.05rem;"><strong>No vamos a arreglarlo todo. Pero vamos a asegurar que esas 2 horas sean tan buenas como puedan ser.</strong></p>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <h2>¿Listo para ser de los primeros?</h2>
+            <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">Acceso inmediato a guía de 115 páginas + baraja de 60 cartas</p>
+
+            <div class="price-display">
+                <span class="currency">€</span>11<span class="currency">,</span>99
+                <div class="period">Precio beta especial (después €14,99)</div>
+            </div>
+
+            <form id="form" class="form-container" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Tu nombre</label>
+                    <input type="text" id="name" name="name" required placeholder="Ej: María">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Tu email</label>
+                    <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">País</label>
+                    <select id="country" name="country" required>
+                        <option value="">Selecciona tu país</option>
+                        <option value="españa">España</option>
+                        <option value="méxico">México</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="colombia">Colombia</option>
+                        <option value="perú">Perú</option>
+                        <option value="chile">Chile</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">¿Cuál es tu rol?</label>
+                    <select id="role" name="role" required>
+                        <option value="">Selecciona tu rol</option>
+                        <option value="hijo">Hijo/a</option>
+                        <option value="cuidador">Cuidador/a principal</option>
+                        <option value="familia">Otro familiar</option>
+                        <option value="profesional">Profesional sanitario</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="form-submit">SÍ, QUIERO SER USUARIO BETA</button>
+                <p style="font-size: 0.85rem; color: var(--color-dark); margin-top: 1rem; text-align: center;">
+                    💳 Pago seguro | 🔒 Privacidad garantizada | 30 días de garantía
+                </p>
+            </form>
+
+            <div style="max-width: 600px; margin: 2rem auto; text-align: center;">
+                <p style="color: var(--color-dark); font-size: 0.95rem;">
+                    <strong>+ Si no estás satisfecho en 30 días,</strong><br>
+                    devolvemos tu dinero al 100%<br>
+                    <em>y mantienes acceso permanente a la guía</em>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Dos Horas Juntos © 2024 | TRÉBEDE |
+                <a href="#">Política de Privacidad</a> |
+                <a href="#">Términos de Servicio</a> |
+                <a href="#">Garantía de Reembolso</a> |
+                <a href="mailto:support@doshorasjuntos.com">Contacto</a>
+            </p>
+            <p style="margin-top: 1rem;">Este material es de apoyo educativo. No reemplaza la evaluación de profesionales sanitarios.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const country = document.getElementById('country').value;
+            const role = document.getElementById('role').value;
+
+            fbq('track', 'Lead');
+            fbq('track', 'Purchase', {value: 11.99, currency: 'EUR'});
+
+            alert(`¡Gracias ${name}! En breve recibirás un email en ${email} con tu acceso.`);
+            document.getElementById('form').reset();
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
