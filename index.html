@@ -19,9 +19,10 @@
     fbq('init', '1163616553512331');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1163616553512331&ev=PageView&noscript=1"
-    /></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1163616553512331&ev=PageView&noscript=1"/>
+    </noscript>
     <!-- End Meta Pixel Code -->
 
     <style>
@@ -46,7 +47,6 @@
             line-height: 1.6;
         }
 
-        /* HEADER */
         header {
             position: sticky;
             top: 0;
@@ -93,13 +93,13 @@
             transition: background 0.3s;
             border: none;
             cursor: pointer;
+            display: inline-block;
         }
 
         .btn-cta:hover {
             background-color: var(--secondary);
         }
 
-        /* HERO */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -137,12 +137,10 @@
         }
 
         .hero-content .btn-cta {
-            display: inline-block;
             font-size: 16px;
             padding: 16px 40px;
         }
 
-        /* PROBLEM SECTION */
         .section {
             padding: 80px 40px;
             max-width: 1200px;
@@ -182,7 +180,6 @@
             border-radius: 8px;
         }
 
-        /* TESTIMONIOS */
         .testimonios {
             background-color: var(--accent);
             padding: 80px 40px;
@@ -226,13 +223,6 @@
             font-size: 14px;
         }
 
-        .testimonio-badge {
-            font-size: 12px;
-            color: #666;
-            margin-top: 10px;
-        }
-
-        /* FAQ */
         .faq {
             padding: 80px 40px;
             max-width: 1200px;
@@ -275,7 +265,6 @@
             font-size: 20px;
         }
 
-        /* GUARANTEE */
         .guarantee {
             background-color: var(--light);
             padding: 60px 40px;
@@ -297,7 +286,6 @@
             margin-bottom: 20px;
         }
 
-        /* CTA SECTION */
         .cta-section {
             text-align: center;
             padding: 80px 40px;
@@ -318,12 +306,6 @@
             margin-right: auto;
         }
 
-        .cta-section .btn-cta {
-            font-size: 18px;
-            padding: 18px 50px;
-        }
-
-        /* SÚPER OFERTA */
         .super-oferta {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
@@ -395,7 +377,6 @@
             background-color: #f5f5f5;
         }
 
-        /* PRICING SECTION */
         .pricing-section {
             padding: 80px 40px;
             background-color: var(--light);
@@ -484,17 +465,6 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-        }
-
-        /* FOOTER */
         footer {
             background: var(--dark);
             color: white;
@@ -513,7 +483,6 @@
             opacity: 0.8;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -522,9 +491,7 @@
             }
 
             nav {
-                flex-direction: column;
-                gap: 10px;
-                font-size: 12px;
+                display: none;
             }
 
             .hero, .section-grid {
@@ -545,12 +512,17 @@
                 grid-template-columns: 1fr;
             }
 
-            nav {
-                display: none;
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
             }
         }
     </style>
 </head>
+
 <body>
 
 <!-- HEADER -->
@@ -558,12 +530,14 @@
     <div class="logo">
         <img src="src/logos/trebede_logo.png" alt="TRÉBEDE">
     </div>
+
     <nav>
         <a href="#problema">Problema</a>
         <a href="#solucion">Solución</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#faq">Preguntas</a>
     </nav>
+
     <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Acceso ahora - €11.99</a>
 </header>
 
@@ -572,10 +546,11 @@
     <div class="hero-image">
         <img src="src/images/hero_image_1200x800.png" alt="Manos de dos generaciones">
     </div>
+
     <div class="hero-content">
         <h1>Dos Horas Juntos</h1>
-        <p>La guía práctica para que las visitas a una persona mayor de tu familia dejen de ser incómodas y se conviertan en momentos que disfrutáis los dos.</p>
-        <p><strong>115 páginas + 60 actividades que funcionan + Baraja de 60 cartas (BONUS)</strong></p>
+        <p>La guía práctica para que las visitas a una persona mayor de tu familia dejen de ser incómodas y se conviertan en momentos más tranquilos, humanos y posibles.</p>
+        <p><strong>115 páginas + 60 actividades sencillas + baraja imprimible de 60 cartas</strong></p>
         <p style="font-size: 14px; color: #666; margin-top: 20px;">✓ Guía en PDF | ✓ Baraja imprimible | ✓ Acceso de por vida | ✓ Garantía 7 días</p>
         <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Comprar ahora - €11.99</a>
     </div>
@@ -587,15 +562,18 @@
         <div class="section-image">
             <img src="src/images/bonus_productos_1200x800.png" alt="Guía y baraja sobre una mesa">
         </div>
+
         <div>
             <h2>¿Qué Incluye?</h2>
             <p><strong>Todo lo que necesitas para las próximas dos horas juntos:</strong></p>
+
             <ul style="margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>✓ Guía completa de 115 páginas</strong> (PDF descargable)</li>
-                <li><strong>✓ 60 Actividades sencillas</strong> (con instrucciones paso a paso)</li>
-                <li><strong>✓ Baraja de 60 cartas (BONUS)</strong> (versión imprimible)</li>
+                <li><strong>✓ Guía completa de 115 páginas</strong> en PDF descargable</li>
+                <li><strong>✓ 60 actividades sencillas</strong> con instrucciones paso a paso</li>
+                <li><strong>✓ Baraja imprimible de 60 cartas</strong> para tener siempre una idea a mano</li>
                 <li><strong>✓ Acceso de por vida</strong> a todos los materiales</li>
             </ul>
+
             <p><strong style="color: var(--primary);">Todo por €11.99</strong></p>
         </div>
     </div>
@@ -607,17 +585,18 @@
         <h2>Elige Tu Plan</h2>
 
         <div class="pricing-grid">
-            <!-- PLAN NORMAL -->
+
             <div class="pricing-card">
                 <h3>Versión Normal</h3>
                 <div class="pricing-price">€11.99</div>
-                <p>Comienza aquí. Todo lo que necesitas.</p>
+                <p>Comienza aquí. Todo lo esencial para tu próxima visita.</p>
+
                 <img src="src/images/bonus_productos_1200x800.png" alt="Guía y baraja de 60 cartas" style="width:100%; height:auto; border-radius:6px; margin-bottom:20px;">
 
                 <ul class="pricing-benefits">
-                    <li>✓ Guía 115 páginas (PDF)</li>
-                    <li>✓ 60 Actividades completas</li>
-                    <li>✓ Baraja de 60 cartas (bonus)</li>
+                    <li>✓ Guía de 115 páginas en PDF</li>
+                    <li>✓ 60 actividades completas</li>
+                    <li>✓ Baraja imprimible de 60 cartas</li>
                     <li>✓ Acceso de por vida</li>
                     <li>✓ Garantía 7 días</li>
                 </ul>
@@ -625,19 +604,19 @@
                 <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Comprar Ahora</a>
             </div>
 
-            <!-- PLAN SÚPER OFERTA -->
             <div class="pricing-card featured">
                 <div class="badge">⭐ Recomendado</div>
                 <h3>SÚPER OFERTA</h3>
                 <div class="pricing-price">€19.99</div>
                 <p><strong>Solamente €8 más</strong></p>
+
                 <img src="src/images/bonus_aprendiendo_1200x800.png" alt="Los materiales del pack completo" style="width:100%; height:auto; border-radius:6px; margin-bottom:20px;">
 
                 <ul class="pricing-benefits">
-                    <li>✓ Todo de Versión Normal +</li>
-                    <li style="margin-top: 10px;"><strong>✓ 50 Actividades Extra</strong> (110 total!)</li>
-                    <li><strong>✓ Guía de Adaptaciones</strong></li>
-                    <li style="font-size: 12px; color: #999; margin-top: 10px;">(cómo adaptar cada actividad a la situación de tu familiar)</li>
+                    <li>✓ Todo de la versión normal +</li>
+                    <li style="margin-top: 10px;"><strong>✓ 50 actividades extra</strong> para ampliar tus ideas</li>
+                    <li><strong>✓ Guía para ajustar cada visita</strong></li>
+                    <li style="font-size: 12px; color: #999; margin-top: 10px;">Cómo usar cada actividad según el momento, el ritmo y la energía de la visita</li>
                     <li style="margin-top: 10px;">✓ Acceso de por vida</li>
                     <li>✓ Garantía 7 días</li>
                 </ul>
@@ -662,6 +641,7 @@
             <p><strong>El vínculo sigue ahí. Solo necesita otra manera de expresarse.</strong></p>
             <p>Eso es exactamente lo que encontrarás aquí.</p>
         </div>
+
         <div class="section-image">
             <img src="src/images/card1_problema_1080x1350.png" alt="Dos personas sentadas en un salón">
         </div>
@@ -673,22 +653,26 @@
     <div class="section-grid reverse">
         <div>
             <h2>La Solución</h2>
-            <p><strong>60 Actividades sencillas + Baraja imprimible de regalo</strong></p>
-            <p>No son ejercicios complicados. Son propuestas simples para abrir conversación y compartir recuerdos.</p>
+            <p><strong>60 actividades sencillas + baraja imprimible de regalo</strong></p>
+            <p>No son ejercicios complicados. Son propuestas simples para abrir conversación, compartir recuerdos y estar presentes de otra manera.</p>
+
             <ul style="margin-left: 20px; margin-bottom: 20px;">
                 <li>✓ Actividades musicales</li>
-                <li>✓ Juegos de reminiscencia</li>
+                <li>✓ Juegos de recuerdos</li>
                 <li>✓ Momentos de creatividad</li>
-                <li>✓ Conversaciones que abren recuerdos</li>
-                <li>✓ Baraja de 60 cartas (para tener siempre a mano)</li>
+                <li>✓ Conversaciones que abren historias</li>
+                <li>✓ Baraja de 60 cartas para tener siempre a mano</li>
             </ul>
-            <p>Cada actividad viene con instrucciones claras, variaciones y formas de adaptarla al día y al ánimo de cada persona.</p>
+
+            <p>Cada actividad viene con instrucciones claras, variaciones y formas de ajustarla al día, al ánimo y al ritmo de cada persona.</p>
+
             <p style="margin-top: 20px; padding: 15px; background-color: var(--accent); border-radius: 4px;">
                 <strong>DE REGALO:</strong> La baraja es imprimible y cabe en el bolso. Sacas una carta y ya tienes de qué hablar.
             </p>
         </div>
+
         <div class="section-image">
-            <img src="src/images/card2_solucion_1080x1350.png" alt="Iconos de las actividades">
+            <img src="src/images/card2_solucion_1080x1350.png" alt="Ideas para visitas familiares">
         </div>
     </div>
 </section>
@@ -698,12 +682,13 @@
     <div class="section-grid reverse">
         <div>
             <h2>Así se ve una buena visita</h2>
-            <p>No es teoría. Es gente sacando una carta, contando una historia y riéndose de algo que pasó hace cincuenta años.</p>
+            <p>No es teoría. Es gente sacando una carta, contando una historia y riéndose de algo que pasó hace años.</p>
             <p>Risas. Recuerdos. Presencia de verdad.</p>
-            <p>Eso es "Dos Horas Juntos".</p>
+            <p>Eso es <strong>Dos Horas Juntos</strong>.</p>
         </div>
+
         <div class="section-image">
-            <img src="src/images/bonus_conexion_1080x1350.png" alt="Dos personas jugando con la baraja">
+            <img src="src/images/bonus_conexion_1080x1350.png" alt="Dos personas compartiendo una actividad">
         </div>
     </div>
 </section>
@@ -720,21 +705,20 @@
             </div>
 
             <div class="testimonio">
-                <div class="testimonio-quote">"Lo mejor ha sido descubrir que no soy el único al que se le hacían largas las tardes de domingo."</div>
+                <div class="testimonio-quote">"Lo mejor ha sido descubrir que no soy la única persona a la que se le hacían largas las tardes de domingo."</div>
                 <div class="testimonio-author">— Anna, 48 años | Valencia</div>
             </div>
 
             <div class="testimonio">
-                <div class="testimonio-quote">"Probé la actividad de música el sábado. Mi madre se puso a cantar. Hacía mucho que no la veía así."</div>
+                <div class="testimonio-quote">"Probé una carta de música el sábado. Terminamos cantando juntas y la tarde cambió por completo."</div>
                 <div class="testimonio-author">— Elena, 52 años | Madrid</div>
             </div>
 
             <div class="testimonio">
-                <div class="testimonio-quote">"Cambió por completo cómo veo las visitas. Ahora voy con ganas."</div>
+                <div class="testimonio-quote">"Cambió por completo cómo preparo las visitas. Ahora llego con una idea y con más calma."</div>
                 <div class="testimonio-author">— Carlos, 58 años | Barcelona</div>
             </div>
         </div>
-
     </div>
 </section>
 
@@ -744,17 +728,20 @@
         <div class="section-image">
             <img src="src/images/square_culpa_1080x1080.png" alt="Dos manos que se buscan">
         </div>
+
         <div>
             <h2>Cómo Empezar</h2>
             <p><strong>Es más simple de lo que piensas:</strong></p>
+
             <ol style="margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>Compra hoy</strong> (€11.99, garantía 7 días)</li>
-                <li><strong>Acceso inmediato</strong> a guía + baraja</li>
-                <li><strong>Lee la primera página</strong> (son 3 páginas, 10 minutos)</li>
+                <li><strong>Compra hoy</strong> con garantía de 7 días</li>
+                <li><strong>Accede inmediatamente</strong> a la guía y la baraja</li>
+                <li><strong>Lee la primera parte</strong> en pocos minutos</li>
                 <li><strong>En tu próxima visita,</strong> prueba una actividad</li>
-                <li><strong>Observa la diferencia</strong> (en ti y en la visita)</li>
+                <li><strong>Observa la diferencia</strong> en la conversación y en tu manera de estar presente</li>
             </ol>
-            <p>Eso es todo. El resto sucede solo.</p>
+
+            <p>Eso es todo. Una idea cambia la visita.</p>
         </div>
     </div>
 </section>
@@ -769,17 +756,17 @@
             <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
-            La mayoría nota algo ya en la primera o segunda visita, sobre todo con las actividades de música y de recuerdos. El cambio de fondo llega cuando dejas de improvisar y entras con una idea preparada. Dale dos o tres semanas.
+            Muchas familias notan algo ya en la primera o segunda visita, sobre todo cuando dejan de improvisar y llegan con una idea preparada. No hace falta hacerlo perfecto. Basta con empezar con una carta, una canción o una pregunta sencilla.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            ¿Sirve aunque a mi familiar le cueste seguir una conversación?
+            ¿Sirve aunque mi familiar hable poco?
             <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
-            Sí. Cada actividad viene con tres formas de hacerla, de la más participativa a la más tranquila. Si un día está más callado, hay propuestas que funcionan igual sin apenas hablar: música, fotos, texturas o simplemente estar al lado.
+            Sí. Hay propuestas para conversaciones más activas y también para momentos tranquilos. Algunas actividades se pueden hacer con música, imágenes, gestos, objetos cotidianos o simplemente estando al lado.
         </div>
     </div>
 
@@ -789,10 +776,10 @@
             <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
-            ✓ Guía completa de 115 páginas (PDF)
-            ✓ 60 Actividades detalladas con instrucciones paso a paso
-            ✓ Baraja de 60 cartas para imprimir en casa
-            ✓ Actualizaciones gratuitas de por vida
+            ✓ Guía completa de 115 páginas en PDF<br>
+            ✓ 60 actividades con instrucciones paso a paso<br>
+            ✓ Baraja imprimible de 60 cartas<br>
+            ✓ Acceso de por vida a los materiales adquiridos
         </div>
     </div>
 
@@ -802,17 +789,17 @@
             <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
-            100%. Si después de 7 días sientes que no te ha servido, devolvemos tu dinero sin preguntas. Y aun así mantienes el acceso a la guía. Así de seguros estamos.
+            Sí. Tienes 7 días para probar el material. Si sientes que no era lo que esperabas, puedes solicitar el reembolso dentro de ese plazo, según las condiciones de la plataforma de pago.
         </div>
     </div>
 
     <div class="faq-item">
         <div class="faq-question">
-            ¿Qué pasa después de los 7 días?
+            ¿Qué pasa después de la compra?
             <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
-            Tienes acceso de por vida a todo, incluidas las actualizaciones. Plus: 15% de descuento permanente en futuros productos TRÉBEDE.
+            Recibes el acceso digital al material y puedes descargar la guía y la baraja para usar en tus próximas visitas. Puedes imprimir las cartas en casa o llevarlas en el móvil.
         </div>
     </div>
 </section>
@@ -820,16 +807,15 @@
 <!-- GUARANTEE -->
 <div class="guarantee">
     <h3>Garantía de 7 Días</h3>
-    <p>Si después de 7 días sientes que no te ha valido la pena, devolvemos tu dinero.</p>
-    <p>Sin preguntas. Sin drama.</p>
-    <p>Y mantienes igualmente el acceso a la guía de 115 páginas.</p>
+    <p>Si después de 7 días sientes que no te ha valido la pena, puedes solicitar el reembolso.</p>
+    <p>Sin drama. Sin complicaciones.</p>
     <p><strong>Eso es lo que creemos en TRÉBEDE.</strong></p>
 </div>
 
 <!-- CTA FINAL -->
 <section class="cta-section">
     <h2>¿Preparado para la próxima visita?</h2>
-    <p>Elige cómo quieres empezar:</p>
+    <p>Elige cómo quieres empezar.</p>
 </section>
 
 <!-- SÚPER OFERTA -->
@@ -843,21 +829,21 @@
 
     <ul class="super-oferta-benefits">
         <li>✓ Todo de la versión normal:</li>
-        <li style="margin-left: 20px;">- 60 Actividades + Baraja de 60 cartas</li>
+        <li style="margin-left: 20px;">- 60 actividades + baraja imprimible de 60 cartas</li>
         <li style="margin-left: 20px;">- Guía de 115 páginas</li>
         <li style="margin-top: 20px;"><strong>PLUS EN SÚPER OFERTA:</strong></li>
-        <li><strong>+ 50 Actividades Extras</strong> (110 actividades totales)</li>
-        <li><strong>+ Guía de Adaptaciones</strong> (cómo ajustar cada visita)</li>
+        <li><strong>+ 50 actividades extra</strong> para ampliar tus ideas</li>
+        <li><strong>+ Guía para ajustar cada visita</strong></li>
         <li style="margin-top: 15px; font-size: 14px; opacity: 0.95;">Acceso de por vida. Garantía 7 días. Sin riesgos.</li>
     </ul>
 
     <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Obtener Súper Oferta Ahora</a>
 </div>
 
-<!-- VERSIÓN NORMAL (DISCRETA) -->
+<!-- VERSIÓN NORMAL -->
 <div style="text-align: center; padding: 40px; color: #666;">
     <p style="font-size: 14px; margin-bottom: 10px;">¿Prefieres la versión esencial?</p>
-    <p style="font-size: 12px;">Versión Normal: guía de 115 páginas + 60 actividades + baraja</p>
+    <p style="font-size: 12px;">Versión Normal: guía de 115 páginas + 60 actividades + baraja imprimible</p>
     <a href="https://pay.hotmart.com/X107062724X" style="color: var(--primary); text-decoration: underline; font-size: 12px;">€11.99 - Versión Normal</a>
 </div>
 
@@ -866,27 +852,27 @@
     <div class="footer-logo">
         <img src="src/logos/trebede_logo.png" alt="TRÉBEDE">
     </div>
-    <p>© 2026 TRÉBEDE | Productos Educativos para Todas las Edades</p>
+    <p>© 2026 TRÉBEDE | Productos educativos y familiares para todas las edades</p>
     <p>Dos Horas Juntos — Actividades para compartir con las personas mayores de tu familia</p>
 </footer>
 
 <script>
     // FAQ Toggle
     const faqQuestions = document.querySelectorAll('.faq-question');
+
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
             const answer = question.nextElementSibling;
             const toggle = question.querySelector('.faq-toggle');
 
-            // Close all others
             document.querySelectorAll('.faq-answer').forEach(a => {
                 if (a !== answer) a.classList.remove('active');
             });
+
             document.querySelectorAll('.faq-toggle').forEach(t => {
                 if (t !== toggle) t.textContent = '+';
             });
 
-            // Toggle current
             answer.classList.toggle('active');
             toggle.textContent = answer.classList.contains('active') ? '−' : '+';
         });
@@ -895,7 +881,15 @@
     // Track button clicks to Hotmart
     document.querySelectorAll('a[href*="hotmart"]').forEach(link => {
         link.addEventListener('click', () => {
-            fbq('track', 'ViewContent');
+            const isSuperOffer = link.href.includes('H107065585V');
+
+            if (typeof fbq === 'function') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: isSuperOffer ? 'Dos Horas Juntos - Super Oferta' : 'Dos Horas Juntos - Version Normal',
+                    currency: 'EUR',
+                    value: isSuperOffer ? 19.99 : 11.99
+                });
+            }
         });
     });
 </script>
