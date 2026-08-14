@@ -483,6 +483,133 @@
             opacity: 0.8;
         }
 
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(43,43,43,0.65);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            border-radius: 12px;
+            max-width: 560px;
+            width: 100%;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 26px;
+            cursor: pointer;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .modal-box h3 {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 16px;
+            padding-right: 20px;
+        }
+
+        .modal-box > p {
+            font-size: 15px;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .modal-compare {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .modal-compare-col {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px 16px;
+            text-align: center;
+        }
+
+        .modal-compare-col.featured {
+            border-color: var(--primary);
+            background-color: var(--accent);
+        }
+
+        .modal-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .modal-compare-col h4 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .modal-price {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .modal-compare-col ul {
+            list-style: none;
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .modal-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .modal-btn-upgrade {
+            text-align: center;
+        }
+
+        .modal-btn-continue {
+            text-align: center;
+            color: #888;
+            text-decoration: underline;
+            font-size: 14px;
+            padding: 8px;
+            background: none;
+        }
+
+        @media (max-width: 480px) {
+            .modal-compare {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -538,7 +665,7 @@
         <a href="#faq">Preguntas</a>
     </nav>
 
-    <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Acceso ahora - €5.00</a>
+    <a href="#planes" class="btn-cta">Acceso ahora - €5.00</a>
 </header>
 
 <!-- HERO -->
@@ -552,7 +679,7 @@
         <p>La guía práctica para que las visitas a una persona mayor de tu familia dejen de ser incómodas y se conviertan en momentos más tranquilos, humanos y posibles.</p>
         <p><strong>115 páginas + 60 actividades sencillas + baraja imprimible de 60 cartas</strong></p>
         <p style="font-size: 14px; color: #666; margin-top: 20px;">✓ Guía en PDF | ✓ Baraja imprimible | ✓ Acceso de por vida | ✓ Garantía 7 días</p>
-        <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Comprar ahora - €5.00</a>
+        <a href="#planes" class="btn-cta">Comprar ahora - €5.00</a>
     </div>
 </section>
 
@@ -580,7 +707,7 @@
 </section>
 
 <!-- PRICING -->
-<section class="pricing-section">
+<section class="pricing-section" id="planes">
     <div class="pricing-container">
         <h2>Elige Tu Plan</h2>
 
@@ -847,6 +974,42 @@
     <a href="https://pay.hotmart.com/X107062724X" style="color: var(--primary); text-decoration: underline; font-size: 12px;">€5.00 - Versión Normal</a>
 </div>
 
+<!-- UPSELL MODAL -->
+<div class="modal-overlay" id="upsell-modal">
+    <div class="modal-box">
+        <button class="modal-close" id="upsell-modal-close" aria-label="Cerrar">&times;</button>
+        <h3>¿Seguro que no quieres la Súper Oferta?</h3>
+        <p>Por solo <strong>€5 más</strong>, llevas <strong>50 actividades extra</strong> y la guía para ajustar cada visita. Es la opción más completa y la que más familias eligen.</p>
+
+        <div class="modal-compare">
+            <div class="modal-compare-col">
+                <h4>Versión Normal</h4>
+                <div class="modal-price">€5.00</div>
+                <ul>
+                    <li>✓ 60 actividades</li>
+                    <li>✓ Baraja de 60 cartas</li>
+                    <li>✓ Guía 115 páginas</li>
+                </ul>
+            </div>
+            <div class="modal-compare-col featured">
+                <div class="modal-badge">⭐ Recomendado</div>
+                <h4>Súper Oferta</h4>
+                <div class="modal-price">€10.00</div>
+                <ul>
+                    <li>✓ Todo lo anterior</li>
+                    <li>✓ +50 actividades extra</li>
+                    <li>✓ Guía para ajustar cada visita</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal-actions">
+            <a href="https://pay.hotmart.com/H107065585V" class="btn-cta modal-btn-upgrade">Sí, quiero la Súper Oferta - €10.00</a>
+            <a href="https://pay.hotmart.com/X107062724X" class="modal-btn-continue">No, gracias. Seguir con la Versión Normal - €5.00</a>
+        </div>
+    </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
     <div class="footer-logo">
@@ -878,10 +1041,40 @@
         });
     });
 
-    // Track button clicks to Hotmart
+    // Upsell modal: intercept "Versión Normal" CTAs (outside the modal itself)
+    // to offer the Súper Oferta before sending the user to checkout.
+    const upsellModal = document.getElementById('upsell-modal');
+
+    function openUpsellModal() {
+        upsellModal.classList.add('active');
+    }
+
+    function closeUpsellModal() {
+        upsellModal.classList.remove('active');
+    }
+
+    document.getElementById('upsell-modal-close').addEventListener('click', closeUpsellModal);
+
+    upsellModal.addEventListener('click', (e) => {
+        if (e.target === upsellModal) closeUpsellModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeUpsellModal();
+    });
+
+    // Track clicks to Hotmart + intercept "Versión Normal" links to show the upsell first
     document.querySelectorAll('a[href*="hotmart"]').forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
             const isSuperOffer = link.href.includes('H107065585V');
+            const isNormal = link.href.includes('X107062724X');
+            const isInsideModal = link.closest('#upsell-modal') !== null;
+
+            if (isNormal && !isInsideModal) {
+                e.preventDefault();
+                openUpsellModal();
+                return;
+            }
 
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout', {
