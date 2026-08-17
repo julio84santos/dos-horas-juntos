@@ -1087,5 +1087,33 @@
     });
 </script>
 
+
+
+<!-- UTMIFY_PASSTHROUGH_V1 -->
+<script>
+(function () {
+    var params = new URLSearchParams(window.location.search);
+    if (!params.toString()) return;
+
+    var commonTrackingKeys = ['fbclid', 'gclid', 'ttclid', 'kwai_click_id', 'src', 'sck', 'xcod'];
+
+    document.querySelectorAll('a[href*="pay.hotmart.com"]').forEach(function (link) {
+        try {
+            var checkoutUrl = new URL(link.href, window.location.href);
+
+            params.forEach(function (value, key) {
+                if (key.indexOf('utm_') === 0 || commonTrackingKeys.indexOf(key) !== -1) {
+                    checkoutUrl.searchParams.set(key, value);
+                }
+            });
+
+            link.href = checkoutUrl.toString();
+        } catch (e) {
+            console.warn('No fue posible preservar los parámetros de seguimiento.', e);
+        }
+    });
+})();
+</script>
+
 </body>
 </html>
