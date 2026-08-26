@@ -766,6 +766,177 @@
                 transform: scale(1);
             }
         }
+
+        /* Price anchoring */
+        .price-strike {
+            font-size: 18px;
+            color: #999;
+            text-decoration: line-through;
+            margin-right: 8px;
+        }
+
+        .price-anchor-line {
+            font-size: 14px;
+            color: #888;
+            margin-top: -12px;
+            margin-bottom: 16px;
+        }
+
+        .super-oferta .price-anchor-line {
+            color: rgba(255,255,255,0.85);
+        }
+
+        .super-oferta .price-strike {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .bonus-value {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-left: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .super-oferta .bonus-value {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .value-total {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .super-oferta .value-total {
+            border-top: 1px dashed rgba(255,255,255,0.3);
+        }
+
+        /* Stat bar */
+        .stat-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 60px auto;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        .stat-bar .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-bar .stat-label {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Peek inside preview */
+        .preview-section {
+            background-color: var(--accent);
+            padding: 80px 40px;
+        }
+
+        .preview-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .preview-container h2 {
+            font-size: 42px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .preview-card {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .preview-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .preview-card span {
+            display: block;
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        /* 3-step how-it-works */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step-icon {
+            font-size: 36px;
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px auto;
+        }
+
+        .step-card h3 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .stat-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -808,6 +979,26 @@
     </div>
 </section>
 
+<!-- STAT BAR -->
+<div class="stat-bar">
+    <div>
+        <div class="stat-number">115</div>
+        <div class="stat-label">páginas de guía</div>
+    </div>
+    <div>
+        <div class="stat-number">60</div>
+        <div class="stat-label">actividades listas</div>
+    </div>
+    <div>
+        <div class="stat-number">60</div>
+        <div class="stat-label">cartas imprimibles</div>
+    </div>
+    <div>
+        <div class="stat-number">€5</div>
+        <div class="stat-label">precio de partida</div>
+    </div>
+</div>
+
 <!-- QUÉ INCLUYE -->
 <section class="section" style="background-color: var(--accent);">
     <div class="section-grid">
@@ -841,7 +1032,7 @@
 
             <div class="pricing-card">
                 <h3>Versión Normal</h3>
-                <div class="pricing-price">€5.00</div>
+                <div class="pricing-price"><span class="price-strike">€19</span>€5.00</div>
                 <p>Comienza aquí. Todo lo esencial para tu próxima visita.</p>
 
                 <img src="src/images/bonus_productos_1200x800.png" alt="Guía y baraja de 60 cartas" style="width:100%; height:auto; border-radius:6px; margin-bottom:20px;">
@@ -861,20 +1052,20 @@
             <div class="pricing-card featured">
                 <div class="badge">⭐ Recomendado</div>
                 <h3>SÚPER OFERTA</h3>
-                <div class="pricing-price">€10.00</div>
+                <div class="pricing-price"><span class="price-strike">€40</span>€10.00</div>
                 <p><strong>Solamente €5 más</strong></p>
-                <p class="value-anchor" style="margin-top:-20px;">Si compraras cada parte por separado, costaría bastante más. Aquí lo tienes todo junto.</p>
 
                 <img src="src/images/bonus_aprendiendo_1200x800.png" alt="Los materiales del pack completo" style="width:100%; height:auto; border-radius:6px; margin-bottom:20px;">
 
                 <ul class="pricing-benefits">
                     <li>✓ Todo de la versión normal +</li>
-                    <li style="margin-top: 10px;"><strong>✓ 50 actividades extra</strong> para ampliar tus ideas</li>
-                    <li><strong>✓ Guía para ajustar cada visita</strong></li>
+                    <li style="margin-top: 10px;"><strong>✓ 50 actividades extra</strong> para ampliar tus ideas <span class="bonus-value">valor €12</span></li>
+                    <li><strong>✓ Guía para ajustar cada visita</strong> <span class="bonus-value">valor €9</span></li>
                     <li style="font-size: 12px; color: #999; margin-top: 10px;">Cómo usar cada actividad según el momento, el ritmo y la energía de la visita</li>
                     <li style="margin-top: 10px;">✓ Acceso de por vida</li>
                     <li>✓ Garantía 7 días</li>
                 </ul>
+                <div class="value-total">Valor total si lo compraras por separado: <strong>€40</strong>. Hoy: <strong style="color: var(--primary);">€10</strong>.</div>
 
                 <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Quiero la Súper Oferta</a>
                 <div class="trust-badges" style="font-size: 11px;"><span>🔒 Pago seguro</span></div>
@@ -926,6 +1117,29 @@
                 <li>✗ Ya tienes un método propio que te funciona muy bien</li>
                 <li>✗ Buscas un libro físico en papel enviado a casa (esto es 100% digital, se lee en el móvil sin imprimir nada)</li>
             </ul>
+        </div>
+    </div>
+</section>
+
+<!-- UN VISTAZO POR DENTRO -->
+<section class="preview-section">
+    <div class="preview-container">
+        <h2>Un vistazo por dentro</h2>
+        <p>Así son de verdad las páginas de la guía y las cartas que vas a imprimir.</p>
+
+        <div class="preview-grid">
+            <div class="preview-card">
+                <img src="src/images/preview/guia_pagina-006.png" alt="Página de la guía: Esto no es un manual de nada">
+                <span>Página de la guía</span>
+            </div>
+            <div class="preview-card">
+                <img src="src/images/preview/guia_pagina2-014.png" alt="Página de la guía con actividad: qué hacer y qué no ayuda">
+                <span>Una de las 60 actividades</span>
+            </div>
+            <div class="preview-card">
+                <img src="src/images/preview/carta_ejemplo.png" alt="Ejemplo de carta imprimible: El recreo">
+                <span>Una carta de la baraja</span>
+            </div>
         </div>
     </div>
 </section>
@@ -1029,27 +1243,29 @@
 </section>
 
 <!-- CÓMO EMPEZAR -->
-<section class="section" style="background-color: var(--light);">
-    <div class="section-grid">
-        <div class="section-image">
-            <img src="src/images/square_culpa_1080x1080.png" alt="Dos manos que se buscan">
+<section class="section" style="background-color: var(--light); text-align: center;">
+    <h2>Cómo Empezar</h2>
+    <p style="max-width: 500px; margin: 0 auto;"><strong>Es más simple de lo que piensas.</strong></p>
+
+    <div class="steps-grid">
+        <div class="step-card">
+            <div class="step-icon">🔓</div>
+            <h3>1. Compra hoy</h3>
+            <p>Pago 100% seguro, con garantía de 7 días. Recibes el acceso al instante.</p>
         </div>
-
-        <div>
-            <h2>Cómo Empezar</h2>
-            <p><strong>Es más simple de lo que piensas:</strong></p>
-
-            <ol style="margin-left: 20px; margin-bottom: 20px;">
-                <li><strong>Compra hoy</strong> con garantía de 7 días</li>
-                <li><strong>Accede inmediatamente</strong> a la guía y la baraja</li>
-                <li><strong>Lee la primera parte</strong> en pocos minutos</li>
-                <li><strong>En tu próxima visita,</strong> prueba una actividad</li>
-                <li><strong>Observa la diferencia</strong> en la conversación y en tu manera de estar presente</li>
-            </ol>
-
-            <p>Eso es todo. Una idea cambia la visita.</p>
+        <div class="step-card">
+            <div class="step-icon">📱</div>
+            <h3>2. Elige una actividad</h3>
+            <p>Abre la guía o saca una carta desde el móvil, la tablet o el ordenador.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-icon">🤝</div>
+            <h3>3. Hazlo juntos</h3>
+            <p>En tu próxima visita, prueba una actividad y observa la diferencia.</p>
         </div>
     </div>
+
+    <p style="margin-top: 30px;">Eso es todo. Una idea cambia la visita.</p>
 </section>
 
 <!-- FAQ -->
@@ -1129,9 +1345,8 @@
     <div class="urgency-badge">🔥 Precio de lanzamiento — disponible por tiempo limitado</div>
     <div class="super-oferta-badge">⭐ RECOMENDADO - MÁS POPULAR</div>
     <h2>SÚPER OFERTA</h2>
-    <div class="super-oferta-price">€10.00</div>
+    <div class="super-oferta-price"><span class="price-strike">€40</span>€10.00</div>
     <div class="super-oferta-comparison">Solamente €5 más que la versión normal</div>
-    <div class="value-anchor">Si compraras cada parte por separado, costaría bastante más. Aquí lo tienes todo junto por €10.</div>
 
     <img src="src/images/bonus_aprendiendo_1200x800.png" alt="Los materiales del pack completo" style="width:100%; height:auto; border-radius:8px; margin:20px 0 30px 0;">
 
@@ -1140,10 +1355,11 @@
         <li style="margin-left: 20px;">- 60 actividades + baraja imprimible de 60 cartas</li>
         <li style="margin-left: 20px;">- Guía de 115 páginas</li>
         <li style="margin-top: 20px;"><strong>PLUS EN SÚPER OFERTA:</strong></li>
-        <li><strong>+ 50 actividades extra</strong> para ampliar tus ideas</li>
-        <li><strong>+ Guía para ajustar cada visita</strong></li>
+        <li><strong>+ 50 actividades extra</strong> para ampliar tus ideas <span class="bonus-value">valor €12</span></li>
+        <li><strong>+ Guía para ajustar cada visita</strong> <span class="bonus-value">valor €9</span></li>
         <li style="margin-top: 15px; font-size: 14px; opacity: 0.95;">Acceso de por vida. Garantía 7 días. Sin riesgos.</li>
     </ul>
+    <div class="value-total">Valor total si lo compraras por separado: <strong>€40</strong>. Hoy: <strong>€10</strong>.</div>
 
     <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Sí, quiero la Súper Oferta</a>
     <div class="trust-badges" style="color: rgba(255,255,255,0.85); margin-top: 16px;">
