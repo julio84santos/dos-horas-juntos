@@ -465,6 +465,125 @@
             text-align: center;
         }
 
+        /* Trust badges under CTA buttons */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .trust-badges span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Urgency badge */
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #FFF3E9;
+            border: 1px solid var(--secondary);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+        .super-oferta .urgency-badge {
+            background: rgba(255,255,255,0.18);
+            border-color: rgba(255,255,255,0.5);
+            color: white;
+        }
+
+        .value-anchor {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .super-oferta .value-anchor {
+            color: rgba(255,255,255,0.85);
+        }
+
+        /* Testimonial avatars */
+        .testimonio {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonio-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .testimonio-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .testimonio-stars {
+            color: #F5A623;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        /* Para quién es esto */
+        .quien-es {
+            background-color: var(--accent);
+        }
+
+        .quien-cols {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .quien-col {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        .quien-col h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        .quien-col ul {
+            list-style: none;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        @media (max-width: 768px) {
+            .quien-cols {
+                grid-template-columns: 1fr;
+            }
+        }
+
         footer {
             background: var(--dark);
             color: white;
@@ -665,7 +784,7 @@
         <a href="#faq">Preguntas</a>
     </nav>
 
-    <a href="#planes" class="btn-cta">Acceso ahora - €5.00</a>
+    <a href="#planes" class="btn-cta">Quiero mis actividades - €5.00</a>
 </header>
 
 <!-- HERO -->
@@ -675,11 +794,17 @@
     </div>
 
     <div class="hero-content">
+        <div class="urgency-badge">🔥 Precio de lanzamiento — disponible por tiempo limitado</div>
         <h1>Dos Horas Juntos</h1>
         <p>La guía práctica para que las visitas a una persona mayor de tu familia dejen de ser incómodas y se conviertan en momentos más tranquilos, humanos y posibles.</p>
         <p><strong>115 páginas + 60 actividades sencillas + baraja imprimible de 60 cartas</strong></p>
         <p style="font-size: 14px; color: #666; margin-top: 20px;">✓ Guía en PDF | ✓ Baraja imprimible | ✓ Acceso de por vida | ✓ Garantía 7 días</p>
-        <a href="#planes" class="btn-cta">Comprar ahora - €5.00</a>
+        <a href="#planes" class="btn-cta">Sí, quiero mejorar mis visitas - €5.00</a>
+        <div class="trust-badges">
+            <span>🔒 Pago 100% seguro</span>
+            <span>💳 Tarjeta y PayPal</span>
+            <span>↩️ Devolución en 7 días</span>
+        </div>
     </div>
 </section>
 
@@ -710,6 +835,7 @@
 <section class="pricing-section" id="planes">
     <div class="pricing-container">
         <h2>Elige Tu Plan</h2>
+        <div style="text-align:center;"><span class="urgency-badge">🔥 Precio de lanzamiento — disponible por tiempo limitado</span></div>
 
         <div class="pricing-grid">
 
@@ -728,7 +854,8 @@
                     <li>✓ Garantía 7 días</li>
                 </ul>
 
-                <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Comprar Ahora</a>
+                <a href="https://pay.hotmart.com/X107062724X" class="btn-cta">Quiero la Versión Normal</a>
+                <div class="trust-badges" style="font-size: 11px;"><span>🔒 Pago seguro</span></div>
             </div>
 
             <div class="pricing-card featured">
@@ -736,6 +863,7 @@
                 <h3>SÚPER OFERTA</h3>
                 <div class="pricing-price">€10.00</div>
                 <p><strong>Solamente €5 más</strong></p>
+                <p class="value-anchor" style="margin-top:-20px;">Si compraras cada parte por separado, costaría bastante más. Aquí lo tienes todo junto.</p>
 
                 <img src="src/images/bonus_aprendiendo_1200x800.png" alt="Los materiales del pack completo" style="width:100%; height:auto; border-radius:6px; margin-bottom:20px;">
 
@@ -748,7 +876,8 @@
                     <li>✓ Garantía 7 días</li>
                 </ul>
 
-                <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Obtener Súper Oferta</a>
+                <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Quiero la Súper Oferta</a>
+                <div class="trust-badges" style="font-size: 11px;"><span>🔒 Pago seguro</span></div>
             </div>
         </div>
 
@@ -771,6 +900,32 @@
 
         <div class="section-image">
             <img src="src/images/card1_problema_1080x1350.png" alt="Dos personas sentadas en un salón">
+        </div>
+    </div>
+</section>
+
+<!-- PARA QUIÉN ES ESTO -->
+<section class="section quien-es">
+    <h2 style="text-align: center;">¿Es esto para ti?</h2>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto;">Antes de seguir, comprueba si te reconoces aquí.</p>
+
+    <div class="quien-cols">
+        <div class="quien-col">
+            <h3>✅ Esto es para ti si...</h3>
+            <ul>
+                <li>✓ Visitas a un padre, madre o abuelo y sientes que la conversación se agota rápido</li>
+                <li>✓ Quieres llegar preparado, no improvisando en la puerta</li>
+                <li>✓ Buscas momentos más humanos, no solo "hacer tiempo"</li>
+                <li>✓ Prefieres algo simple y listo para usar hoy mismo</li>
+            </ul>
+        </div>
+        <div class="quien-col">
+            <h3>❌ Puede que no sea para ti si...</h3>
+            <ul>
+                <li>✗ Buscas terapia clínica o material médico especializado</li>
+                <li>✗ Ya tienes un método propio que te funciona muy bien</li>
+                <li>✗ No dispones de PDF ni impresora ni móvil para ver las cartas</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -827,23 +982,47 @@
 
         <div class="testimonios-grid">
             <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">R</div>
+                    <div>
+                        <div class="testimonio-author">Roberto, 55 años | Sevilla</div>
+                        <div class="testimonio-stars">★★★★★</div>
+                    </div>
+                </div>
                 <div class="testimonio-quote">"No esperaba que también me sirviera a mí. Ahora voy a las visitas de otra manera."</div>
-                <div class="testimonio-author">— Roberto, 55 años | Sevilla</div>
             </div>
 
             <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">A</div>
+                    <div>
+                        <div class="testimonio-author">Anna, 48 años | Valencia</div>
+                        <div class="testimonio-stars">★★★★★</div>
+                    </div>
+                </div>
                 <div class="testimonio-quote">"Lo mejor ha sido descubrir que no soy la única persona a la que se le hacían largas las tardes de domingo."</div>
-                <div class="testimonio-author">— Anna, 48 años | Valencia</div>
             </div>
 
             <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">E</div>
+                    <div>
+                        <div class="testimonio-author">Elena, 52 años | Madrid</div>
+                        <div class="testimonio-stars">★★★★★</div>
+                    </div>
+                </div>
                 <div class="testimonio-quote">"Probé una carta de música el sábado. Terminamos cantando juntas y la tarde cambió por completo."</div>
-                <div class="testimonio-author">— Elena, 52 años | Madrid</div>
             </div>
 
             <div class="testimonio">
+                <div class="testimonio-header">
+                    <div class="testimonio-avatar">C</div>
+                    <div>
+                        <div class="testimonio-author">Carlos, 58 años | Barcelona</div>
+                        <div class="testimonio-stars">★★★★★</div>
+                    </div>
+                </div>
                 <div class="testimonio-quote">"Cambió por completo cómo preparo las visitas. Ahora llego con una idea y con más calma."</div>
-                <div class="testimonio-author">— Carlos, 58 años | Barcelona</div>
             </div>
         </div>
     </div>
@@ -947,10 +1126,12 @@
 
 <!-- SÚPER OFERTA -->
 <div class="super-oferta">
+    <div class="urgency-badge">🔥 Precio de lanzamiento — disponible por tiempo limitado</div>
     <div class="super-oferta-badge">⭐ RECOMENDADO - MÁS POPULAR</div>
     <h2>SÚPER OFERTA</h2>
     <div class="super-oferta-price">€10.00</div>
     <div class="super-oferta-comparison">Solamente €5 más que la versión normal</div>
+    <div class="value-anchor">Si compraras cada parte por separado, costaría bastante más. Aquí lo tienes todo junto por €10.</div>
 
     <img src="src/images/bonus_aprendiendo_1200x800.png" alt="Los materiales del pack completo" style="width:100%; height:auto; border-radius:8px; margin:20px 0 30px 0;">
 
@@ -964,7 +1145,11 @@
         <li style="margin-top: 15px; font-size: 14px; opacity: 0.95;">Acceso de por vida. Garantía 7 días. Sin riesgos.</li>
     </ul>
 
-    <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Obtener Súper Oferta Ahora</a>
+    <a href="https://pay.hotmart.com/H107065585V" class="btn-cta">Sí, quiero la Súper Oferta</a>
+    <div class="trust-badges" style="color: rgba(255,255,255,0.85); margin-top: 16px;">
+        <span>🔒 Pago 100% seguro</span>
+        <span>💳 Tarjeta y PayPal</span>
+    </div>
 </div>
 
 <!-- VERSIÓN NORMAL -->
@@ -1063,6 +1248,20 @@
         if (e.key === 'Escape') closeUpsellModal();
     });
 
+    // Exit-intent: if the visitor moves the mouse toward the top of the
+    // viewport (about to close the tab / go back) and hasn't seen the
+    // downsell offer yet this session, show it once as a last chance.
+    let hasSeenUpsellThisSession = sessionStorage.getItem('dhj_upsell_shown') === '1';
+    let hasClickedCheckout = false;
+
+    document.addEventListener('mouseout', (e) => {
+        if (hasSeenUpsellThisSession || hasClickedCheckout) return;
+        if (e.clientY > 0) return;
+        hasSeenUpsellThisSession = true;
+        sessionStorage.setItem('dhj_upsell_shown', '1');
+        openUpsellModal();
+    });
+
     // Track clicks to Hotmart + intercept "Versión Normal" links to show the upsell first
     document.querySelectorAll('a[href*="hotmart"]').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -1075,6 +1274,8 @@
                 openUpsellModal();
                 return;
             }
+
+            hasClickedCheckout = true;
 
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout', {
