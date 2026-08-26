@@ -862,7 +862,7 @@
 
         .preview-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             margin-top: 40px;
         }
@@ -886,6 +886,40 @@
             font-size: 13px;
             color: #888;
             margin-top: 10px;
+        }
+
+        .preview-card-pair {
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .preview-card-pair-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .preview-card-pair img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .preview-card-pair span {
+            display: block;
+            font-size: 13px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .preview-card-pair-images {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* 3-step how-it-works */
@@ -1133,13 +1167,17 @@
                 <span>Página de la guía</span>
             </div>
             <div class="preview-card">
-                <img src="src/images/preview/guia_pagina2-014.png" alt="Página de la guía con actividad: qué hacer y qué no ayuda">
+                <img src="src/images/preview/actividad_estilizada.png" alt="Ficha de actividad: Los apodos del pueblo, con duración, cómo empezar y qué evitar">
                 <span>Una de las 60 actividades</span>
             </div>
-            <div class="preview-card">
-                <img src="src/images/preview/carta_ejemplo.png" alt="Ejemplo de carta imprimible: El recreo">
-                <span>Una carta de la baraja</span>
+        </div>
+
+        <div class="preview-card-pair">
+            <div class="preview-card-pair-images">
+                <img src="src/images/preview/carta_pregunta.png" alt="Cara de preguntas de la carta: El recreo">
+                <img src="src/images/preview/carta_imagen.jpg" alt="Cara ilustrada de la carta: niños jugando en el recreo">
             </div>
+            <span>Cada carta tiene dos caras: las preguntas para conversar y una imagen para ayudar a recordar</span>
         </div>
     </div>
 </section>
