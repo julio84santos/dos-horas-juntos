@@ -141,7 +141,7 @@ function welcome() {
         <div class="trust"><span>✓ Sin registros</span><span>✓ Resultado inmediato</span><span>✓ 100% gratuito</span></div>
       </div>
       <div class="hero-art">
-        <img src="./hero-family.png" alt="Madre e hija compartiendo recuerdos durante una visita" />
+        <img src="./hero-family.jpg" width="1400" height="788" alt="Madre e hija compartiendo recuerdos durante una visita" decoding="async" fetchpriority="high" />
         <div class="photo-wash"></div>
         <div class="art-note"><strong>No falta cariño.</strong><span>A veces simplemente faltan ideas.</span></div>
       </div>
@@ -423,7 +423,7 @@ function result() {
 }
 
 function render() {
-  window.scrollTo({ top: 0, behavior: 'instant' });
+  window.scrollTo(0, 0);
   if (state.screen === 'welcome') welcome();
   if (state.screen === 'question') question();
   if (state.screen === 'belief') belief();
