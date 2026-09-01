@@ -348,9 +348,6 @@ function result() {
   const profile = getProfile();
   const frequent = ['weekly', 'monthly_many'].includes(state.answers.frequency);
   const recommended = frequent ? 'complete' : 'normal';
-  const planTitle = recommended === 'complete' ? 'Súper Oferta' : 'Versión Normal';
-  const price = recommended === 'complete' ? '€10' : '€5';
-  const checkout = recommended === 'complete' ? CHECKOUT_COMPLETE : CHECKOUT_NORMAL;
 
   track('ResultView', { profile: profile.key, recommended_plan: recommended });
   app.innerHTML = shell(`
@@ -362,37 +359,56 @@ function result() {
         <p>${profile.intro}</p>
       </div>
 
-      <div class="result-grid">
-        <div class="diagnosis">
-          <p class="section-label">TU DIAGNÓSTICO</p>
-          <h2>No necesitas encontrar conversación.<br><em>Necesitas crear el momento para que aparezca.</em></h2>
-          <p>Por lo que nos has contado, buscas ${desireLabel()} cuando visitas a ${relationLabel()}. Tener una idea preparada puede evitar que toda la visita dependa de los mismos temas, la televisión o el silencio.</p>
-          <ul class="check-list">
-            <li><span>✓</span> Propuestas sencillas, sin preparar nada complicado</li>
-            <li><span>✓</span> Actividades que respetan el ritmo de una persona mayor</li>
-            <li><span>✓</span> Ideas adultas, naturales y fáciles de adaptar</li>
-          </ul>
+      <div class="diagnosis">
+        <p class="section-label">TU DIAGNÓSTICO</p>
+        <h2>No necesitas encontrar conversación.<br><em>Necesitas crear el momento para que aparezca.</em></h2>
+        <p>Por lo que nos has contado, buscas ${desireLabel()} cuando visitas a ${relationLabel()}. Tener una idea preparada puede evitar que toda la visita dependa de los mismos temas, la televisión o el silencio.</p>
+        <ul class="check-list">
+          <li><span>✓</span> Propuestas sencillas, sin preparar nada complicado</li>
+          <li><span>✓</span> Actividades que respetan el ritmo de una persona mayor</li>
+          <li><span>✓</span> Ideas adultas, naturales y fáciles de adaptar</li>
+        </ul>
+      </div>
+
+      <section class="offers-section">
+        <div class="offers-heading">
+          <p class="section-label">ELIGE CÓMO QUIERES EMPEZAR</p>
+          <h2>Las dos opciones están disponibles</h2>
+          <p>Hemos destacado la que mejor encaja con tus respuestas, pero tú tienes la última palabra.</p>
         </div>
 
-        <aside class="offer-card">
-          <div class="recommended">RECOMENDADO PARA VUESTRO CASO</div>
-          <p class="small">Tu mejor opción</p>
-          <h2>${planTitle}</h2>
-          <div class="price"><del>${recommended === 'complete' ? '€40' : '€19'}</del><strong>${price}</strong></div>
-          <p class="once">Pago único · Acceso de por vida</p>
-          <ul>
-            <li><b>✓</b> Guía práctica de 115 páginas</li>
-            <li><b>✓</b> 60 actividades completas</li>
-            <li><b>✓</b> Baraja imprimible de 60 cartas</li>
-            ${recommended === 'complete' ? '<li><b>✓</b> 50 actividades adicionales</li><li><b>✓</b> Guía para adaptar cada visita</li>' : ''}
-          </ul>
-          <a class="primary checkout" href="${withTracking(checkout)}">Preparar nuestra próxima visita <span>→</span></a>
-          <div class="secure">🔒 Pago seguro · Garantía de 7 días</div>
-          <a class="alternative" href="${withTracking(recommended === 'complete' ? CHECKOUT_NORMAL : CHECKOUT_COMPLETE)}">
-            ${recommended === 'complete' ? 'Prefiero empezar con la versión de €5' : 'Ver el pack completo por solo €5 más'}
-          </a>
-        </aside>
-      </div>
+        <div class="plans-grid">
+          <article class="offer-card ${recommended === 'normal' ? 'is-recommended' : ''}">
+            <div class="offer-label">${recommended === 'normal' ? 'RECOMENDADO PARA VUESTRO CASO' : 'OPCIÓN ESENCIAL'}</div>
+            <p class="small">Para empezar de forma sencilla</p>
+            <h2>Versión Normal</h2>
+            <div class="price"><del>€19</del><strong>€5</strong></div>
+            <p class="once">Pago único · Acceso de por vida</p>
+            <ul>
+              <li><b>✓</b> Guía práctica de 115 páginas</li>
+              <li><b>✓</b> 60 actividades completas</li>
+              <li><b>✓</b> Baraja imprimible de 60 cartas</li>
+            </ul>
+            <a class="primary checkout" data-plan="normal" href="${withTracking(CHECKOUT_NORMAL)}">Elegir la versión normal — €5 <span>→</span></a>
+            <div class="secure">🔒 Pago seguro · Garantía de 7 días</div>
+          </article>
+
+          <article class="offer-card ${recommended === 'complete' ? 'is-recommended' : ''}">
+            <div class="offer-label">${recommended === 'complete' ? 'RECOMENDADO PARA VUESTRO CASO' : 'LA EXPERIENCIA MÁS COMPLETA'}</div>
+            <p class="small">Más variedad por solo €5 adicionales</p>
+            <h2>Pack Completo</h2>
+            <div class="price"><del>€40</del><strong>€10</strong></div>
+            <p class="once">Pago único · Acceso de por vida</p>
+            <ul>
+              <li><b>✓</b> Todo lo incluido en la versión normal</li>
+              <li><b>✓</b> 50 actividades adicionales</li>
+              <li><b>✓</b> Guía para adaptar cada visita</li>
+            </ul>
+            <a class="primary checkout" data-plan="complete" href="${withTracking(CHECKOUT_COMPLETE)}">Elegir el pack completo — €10 <span>→</span></a>
+            <div class="secure">🔒 Pago seguro · Garantía de 7 días</div>
+          </article>
+        </div>
+      </section>
 
       <div class="why">
         <span>POR QUÉ ESTA RECOMENDACIÓN</span>
@@ -401,8 +417,8 @@ function result() {
     </section>
   `, 'result-page');
 
-  app.querySelectorAll('.checkout, .alternative').forEach(link => link.addEventListener('click', () => {
-    track('CheckoutClick', { plan: link.classList.contains('alternative') ? 'alternative' : recommended, profile: profile.key });
+  app.querySelectorAll('.checkout').forEach(link => link.addEventListener('click', () => {
+    track('CheckoutClick', { plan: link.dataset.plan, recommended_plan: recommended, profile: profile.key });
   }));
 }
 
